@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="EGX Terminal — a live Egyptian Exchange market terminal. Track EGX stocks, sector leaders, watchlists and live quotes."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("egx-terminal.language.v1");
+          var lang =
+            stored === "ar" || stored === "en"
+              ? stored
+              : (navigator.language || "").toLowerCase().indexOf("ar") === 0
+                ? "ar"
+                : "en";
+          document.documentElement.lang = lang;
+          document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+          document.title = lang === "ar" ? "منصة البورصة" : "EGX Terminal";
+          if (lang === "ar") document.documentElement.classList.add("lang-ar");
+        } catch (error) {
+          /* Storage can be unavailable; the React provider will retry. */
+        }
+      })();
+    </script>
+    <title>EGX Terminal — Egyptian Exchange Market Terminal</title>
+    <script type="module" crossorigin src="/assets/index-Crt8t94I.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-vendor-BDABYZmq.js">
+    <link rel="modulepreload" crossorigin href="/assets/supabase-vendor-CelhU-Wa.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-DLGX7Ay8.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
